@@ -1,0 +1,56 @@
+@font-face {
+    font-display: swap;
+    font-family: "CalSans";
+    font-weight: 400;
+    src: url(calsans-static-full/ttf/CalSans-Regular.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "CalSans";
+    font-weight: 500;
+    src: url(calsans-static-full/ttf/CalSans-Medium.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "CalSans";
+    font-weight: 600;
+    src: url(calsans-static-full/ttf/CalSans-SemiBold.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "CalSans";
+    font-weight: 700;
+    src: url(calsans-static-full/ttf/CalSans-Bold.ttf);
+}
+
+/* Calsans ui */
+@font-face {
+    font-display: swap;
+    font-family: "CalSans-ui";
+    font-weight: 400;
+    src: url(calsans-static-full/ttf/CalSansUI-Regular.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "CalSans-ui";
+    font-weight: 500;
+    src: url(calsans-static-full/ttf/CalSansUI-Medium.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "CalSans-ui";
+    font-weight: 600;
+    src: url(calsans-static-full/ttf/CalSansUI-SemiBold.ttf);
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "CalSans-ui";
+    font-weight: 700;
+    src: url(calsans-static-full/ttf/CalSansUI-Bold.ttf);
+}

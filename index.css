@@ -1,0 +1,242 @@
+body {
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    font-family: "Calsans";
+    font-size: 1rem;
+    color: #ffffff;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.Hauptbanner-title {
+    overflow: hidden;
+    position: relative;
+    padding: 280px 18px;
+    background-color: #0000003e;
+    
+}
+
+.Hauptbanner-overlay {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: blur(8px);
+    animation: loop-banner 24s infinite ease-in-out;
+}
+
+@keyframes loop-banner {
+    0% { transform: translateY(8px) rotate(8deg); }
+    50% { transform: translateY(-8px) rotate(-8deg); }
+    100% { transform: translateY(8px) rotate(8deg); }
+}
+
+.overlay-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.35);
+    transition: opacity 1s ease-in-out;
+}
+
+.Hauptbanner-header {
+    text-align: center;
+    animation: Cool-header 0.5s;
+}
+
+.Header-img {
+    width: 84px;
+    animation: Cool-rotate 0.67s;
+    transform: rotate(18deg);
+    transition: all 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.Header-img:hover {
+    transform: rotate(0deg);
+}
+
+@keyframes Cool-rotate {
+    from { opacity: 0; transform: rotate(0deg);}
+    to { opacity: 1; transform: rotate(18deg); }
+}
+
+.banner-header {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 0;
+    transition: all 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.banner-header:hover {
+    color: #c0d8ff;
+    letter-spacing: 18px;
+}
+
+@keyframes Cool-header {
+    from {opacity: 0; transform: translateY(8px);}
+    to {opacity: 1; transform: translateY(0px);}
+}
+
+.Hauptbanner-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Calsans-ui";
+    font-weight: 500;
+}
+
+.Hauptbanner-btn {
+    white-space: nowrap;
+    border-radius: 14px;
+    padding: 4px 18px;
+    color: #ffffff8d;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.Hauptbanner-btn:hover {
+    color: #ffffff;
+    background-color: #0000003e;
+    transition: all 0s ease;
+}
+
+.Main-content {
+    margin: auto;
+    width: 80%;
+    padding: 12px 12px;
+    color: #000000;
+}
+
+.Main-section {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.Main-papier-content {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.papier-card {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 18px;
+    border-radius: 14px;
+    background-color: #00000000;
+    transition: all 0.18s ease;
+}
+
+.papier-card:hover {
+    box-shadow: 0 0 0 2px #7391ff;
+    background-color: #0000003e;
+}
+
+.papier-card:hover .Papier-overlay {
+    filter: blur(4px);
+}
+
+.papier-card:hover .Papier-actions {
+    opacity: 1;
+}
+
+.Papier-overlay {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: blur(0px);
+    z-index: -1;
+    transition: all 0.18s ease;
+}
+
+.Papier-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Papier-actions {
+    opacity: 0;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    transition: all 0.18s ease;
+}
+
+.Papier-download {
+    padding: 4px 18px;
+    border-radius: 14px;
+    background-color: #89b6ff;
+    cursor: pointer;
+}
+
+.Papier-download:hover {
+    background-color: #639fff;
+}
+
+.Papier-qulle {
+    padding: 4px 18px;
+    border-radius: 14px;
+    box-shadow: 0 0 0 2px #ffffff8d;
+    cursor: pointer;
+}
+
+.Papier-qulle:hover {
+    box-shadow: 0 0 0 2px #ffffff00;
+    background-color: #639fff;
+}
+
+@media (max-width: 1024px) {
+
+    .Main-papier-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .papier-card {
+        padding: 80px 18px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .Hauptbanner-title {
+        padding: 140px 18px;
+    }
+
+    .banner-header {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    .banner-header:hover {
+        letter-spacing: 0px;
+    }
+
+    .Hauptbanner-actions {
+        display: grid;
+    }
+
+    .Main-papier-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .papier-card {
+        padding: 50px 18px;
+    }
+
+}
